@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Phasmophobia Journal</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+        <script src="vue.js"></script>
+    </head>
+
+    <body>
+        <div class="paper" id="app">
+            <h1>Phasmophobia Journal</h1>
+            <div>
+                <h2>Clues:</h2>
+                <label>
+                    <input type="checkbox" value="SPIRIT_BOX" v-model="clues" :disabled="exclude.indexOf('SPIRIT_BOX') !== -1 || availableClues.indexOf('SPIRIT_BOX') === -1"/>
+                    Spirit Box
+                </label>
+                <label>
+                    <input type="checkbox" value="FINGERPRINTS" v-model="clues" :disabled="exclude.indexOf('FINGERPRINTS') !== -1 || availableClues.indexOf('FINGERPRINTS') === -1"/>
+                    Fingerprints
+                </label>
+                <label>
+                    <input type="checkbox" value="GHOST_WRITING" v-model="clues" :disabled="exclude.indexOf('GHOST_WRITING') !== -1 || availableClues.indexOf('GHOST_WRITING') === -1"/>
+                    Ghost Writing
+                </label>
+                <label>
+                    <input type="checkbox" value="FREEZING_TEMPERATURES" v-model="clues" :disabled="exclude.indexOf('FREEZING_TEMPERATURES') !== -1 || availableClues.indexOf('FREEZING_TEMPERATURES') === -1"/>
+                    Freezing Temperatures
+                </label>
+                <label>
+                    <input type="checkbox" value="EMF_LEVEL_5" v-model="clues" :disabled="exclude.indexOf('EMF_LEVEL_5') !== -1 || availableClues.indexOf('EMF_LEVEL_5') === -1"/>
+                    EMF Level 5
+                </label>
+                <label>
+                    <input type="checkbox" value="GHOST_ORB" v-model="clues" :disabled="exclude.indexOf('GHOST_ORB') !== -1 || availableClues.indexOf('GHOST_ORB') === -1"/>
+                    Ghost Orb
+                </label>
+            </div>
+
+            <div>
+                <h2>Exclude:</h2>
+                <label>
+                    <input type="checkbox" value="SPIRIT_BOX" v-model="exclude" :disabled="clues.indexOf('SPIRIT_BOX') !== -1 || availableClues.indexOf('SPIRIT_BOX') === -1"/>
+                    Spirit Box
+                </label>
+                <label>
+                    <input type="checkbox" value="FINGERPRINTS" v-model="exclude" :disabled="clues.indexOf('FINGERPRINTS') !== -1 || availableClues.indexOf('FINGERPRINTS') === -1"/>
+                    Fingerprints
+                </label>
+                <label>
+                    <input type="checkbox" value="GHOST_WRITING" v-model="exclude" :disabled="clues.indexOf('GHOST_WRITING') !== -1 || availableClues.indexOf('GHOST_WRITING') === -1"/>
+                    Ghost Writing
+                </label>
+                <label>
+                    <input type="checkbox" value="FREEZING_TEMPERATURES" v-model="exclude" :disabled="clues.indexOf('FREEZING_TEMPERATURES') !== -1 || availableClues.indexOf('FREEZING_TEMPERATURES') === -1"/>
+                    Freezing Temperatures
+                </label>
+                <label>
+                    <input type="checkbox" value="EMF_LEVEL_5" v-model="exclude" :disabled="clues.indexOf('EMF_LEVEL_5') !== -1 || availableClues.indexOf('EMF_LEVEL_5') === -1"/>
+                    EMF Level 5
+                </label>
+                <label>
+                    <input type="checkbox" value="GHOST_ORB" v-model="exclude" :disabled="clues.indexOf('GHOST_ORB') !== -1 || availableClues.indexOf('GHOST_ORB') === -1"/>
+                    Ghost Orb
+                </label>
+            </div>
+
+            <br/>
+            <button @click="expanded = !expanded" class="float-right">
+                {{ expanded ? 'Collapse All' : 'Expand All' }}
+            </button>
+            <br/>
+
+            <app-ghost v-for="ghost of filteredGhosts" :ghost="ghost" :expanded="expanded"></app-ghost>
+            <br/>
+        </div>
+        <script src='script.js'></script>
+    </body>
+</html>

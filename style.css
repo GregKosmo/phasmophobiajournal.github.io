@@ -1,0 +1,91 @@
+html {
+    font-size: 24px;
+    color: rgb(48, 28, 15);
+}
+
+body {
+    background-color: rgb(22, 22, 22);
+    margin: 0;
+    box-sizing: border-box;
+    padding: 16px
+}
+
+*:focus {
+    outline: 2px solid rgb(120, 155, 155);
+    outline-offset: 2px;
+}
+
+.paper {
+    background-color: tan;
+    max-width: 900px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 18px;
+}
+
+input:not([type="checkbox"]) {
+    font-size: 1rem;
+    border: 2px solid rgb(48, 28, 15);
+    border-radius: 6px;
+    padding: 2px 6px;
+    box-sizing: border-box;
+}
+
+button {
+    font-size: 1rem;
+    padding: 2px 6px;
+    cursor: pointer;
+    border: 1px solid rgb(48, 28, 15);
+    background: rgb(139, 121, 105);
+    box-sizing: border-box;
+}
+
+button:active {
+    background: rgb(153, 133, 116);
+}
+
+select {
+    font-size: 1rem;
+    border: 2px solid rgb(48, 28, 15);
+    border-radius: 6px;
+    padding: 2px 6px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+input[type="checkbox"]:focus {
+    outline: 1.25px solid rgb(120, 155, 155);
+}
+
+h1 {
+    margin-top: 0px;
+}
+
+h2 {
+    margin-bottom: 0px;
+}
+
+h3 {
+    margin: 0px;
+}
+
+h4 {
+    margin-bottom: 0px;
+}
+
+hr {
+    border-color: rgb(48, 28, 15);
+}
+
+label {
+    white-space: nowrap;
+}
+
+.float-right {
+    float: right;
+}
