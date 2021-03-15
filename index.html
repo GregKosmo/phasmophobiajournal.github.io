@@ -43,27 +43,27 @@
             <div>
                 <h2>Exclude:</h2>
                 <label>
-                    <input type="checkbox" value="SPIRIT_BOX" v-model="exclude" :disabled="clues.indexOf('SPIRIT_BOX') !== -1 || availableClues.indexOf('SPIRIT_BOX') === -1"/>
+                    <input type="checkbox" value="SPIRIT_BOX" v-model="exclude" :disabled="clues.indexOf('SPIRIT_BOX') !== -1 || (exclude.indexOf('SPIRIT_BOX') === -1 && availableClues.indexOf('SPIRIT_BOX') === -1)"/>
                     Spirit Box
                 </label>
                 <label>
-                    <input type="checkbox" value="FINGERPRINTS" v-model="exclude" :disabled="clues.indexOf('FINGERPRINTS') !== -1 || availableClues.indexOf('FINGERPRINTS') === -1"/>
+                    <input type="checkbox" value="FINGERPRINTS" v-model="exclude" :disabled="clues.indexOf('FINGERPRINTS') !== -1 || (exclude.indexOf('FINGERPRINTS') === -1 && availableClues.indexOf('FINGERPRINTS') === -1)"/>
                     Fingerprints
                 </label>
                 <label>
-                    <input type="checkbox" value="GHOST_WRITING" v-model="exclude" :disabled="clues.indexOf('GHOST_WRITING') !== -1 || availableClues.indexOf('GHOST_WRITING') === -1"/>
+                    <input type="checkbox" value="GHOST_WRITING" v-model="exclude" :disabled="clues.indexOf('GHOST_WRITING') !== -1 || (exclude.indexOf('GHOST_WRITING') === -1 && availableClues.indexOf('GHOST_WRITING') === -1)"/>
                     Ghost Writing
                 </label>
                 <label>
-                    <input type="checkbox" value="FREEZING_TEMPERATURES" v-model="exclude" :disabled="clues.indexOf('FREEZING_TEMPERATURES') !== -1 || availableClues.indexOf('FREEZING_TEMPERATURES') === -1"/>
+                    <input type="checkbox" value="FREEZING_TEMPERATURES" v-model="exclude" :disabled="clues.indexOf('FREEZING_TEMPERATURES') !== -1 || (exclude.indexOf('FREEZING_TEMPERATURES') === -1 && availableClues.indexOf('FREEZING_TEMPERATURES') === -1)"/>
                     Freezing Temperatures
                 </label>
                 <label>
-                    <input type="checkbox" value="EMF_LEVEL_5" v-model="exclude" :disabled="clues.indexOf('EMF_LEVEL_5') !== -1 || availableClues.indexOf('EMF_LEVEL_5') === -1"/>
+                    <input type="checkbox" value="EMF_LEVEL_5" v-model="exclude" :disabled="clues.indexOf('EMF_LEVEL_5') !== -1 || (exclude.indexOf('EMF_LEVEL_5') === -1 && availableClues.indexOf('EMF_LEVEL_5') === -1)"/>
                     EMF Level 5
                 </label>
                 <label>
-                    <input type="checkbox" value="GHOST_ORB" v-model="exclude" :disabled="clues.indexOf('GHOST_ORB') !== -1 || availableClues.indexOf('GHOST_ORB') === -1"/>
+                    <input type="checkbox" value="GHOST_ORB" v-model="exclude" :disabled="clues.indexOf('GHOST_ORB') !== -1 || (exclude.indexOf('GHOST_ORB') === -1 && availableClues.indexOf('GHOST_ORB') === -1)"/>
                     Ghost Orb
                 </label>
             </div>
