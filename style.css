@@ -89,3 +89,9 @@ label {
 .float-right {
     float: right;
 }
+
+@media only screen and (max-width: 768px) {
+    body {
+        padding: 0px;
+    }
+}
