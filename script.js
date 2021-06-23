@@ -222,6 +222,36 @@ const oni = {
     ]
 };
 
+/**
+ * @type {Ghost}
+ */
+const hantu = {
+    name: `Hantu`,
+    description: `A Hantu is a rare ghost that can be found in hot climates. They are known to attack often during cold weather.`,
+    strength: `Lower temperatures can cause the Hantu to move at faster speeds.`,
+    weakness: `A Hantu will move slower in warmer areas.`,
+    evidence: [
+        Evidence.FINGERPRINTS,
+        Evidence.GHOST_ORB,
+        Evidence.GHOST_WRITING
+    ]
+}
+
+/**
+ * @type {Ghost}
+ */
+const yokai = {
+    name: `Yokai`,
+    description: `A Yokai is a common type of ghost that is attracted to human voices. They can usually be found haunting family homes.`,
+    strength: `Talking near a Yokai will anger it and increase its chance of attacking.`,
+    weakness: `When hunting, a Yokai can only hear voices close to it.`,
+    evidence: [
+        Evidence.SPIRIT_BOX,
+        Evidence.GHOST_ORB,
+        Evidence.GHOST_WRITING,
+    ]
+}
+
 const ghosts = [
     spirit,
     wraith,
@@ -234,7 +264,9 @@ const ghosts = [
     shade,
     demon,
     yurei,
-    oni
+    oni,
+    hantu,
+    yokai,
 ];
 
 const ghostComponent = Vue.component('app-ghost', {
