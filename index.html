@@ -38,6 +38,10 @@
                     <input type="checkbox" value="GHOST_ORB" v-model="clues" :disabled="exclude.indexOf('GHOST_ORB') !== -1 || availableClues.indexOf('GHOST_ORB') === -1"/>
                     Ghost Orb
                 </label>
+                <label>
+                    <input type="checkbox" value="DOTS_PROJECTOR" v-model="clues" :disabled="exclude.indexOf('DOTS_PROJECTOR') !== -1 || availableClues.indexOf('DOTS_PROJECTOR') === -1"/>
+                    D.O.T.S Projector
+                </label>
             </div>
 
             <div>
@@ -65,6 +69,10 @@
                 <label>
                     <input type="checkbox" value="GHOST_ORB" v-model="exclude" :disabled="clues.indexOf('GHOST_ORB') !== -1 || (exclude.indexOf('GHOST_ORB') === -1 && availableClues.indexOf('GHOST_ORB') === -1)"/>
                     Ghost Orb
+                </label>
+                <label>
+                    <input type="checkbox" value="DOTS_PROJECTOR" v-model="exclude" :disabled="clues.indexOf('DOTS_PROJECTOR') !== -1 || (exclude.indexOf('DOTS_PROJECTOR') === -1 && availableClues.indexOf('DOTS_PROJECTOR') === -1)"/>
+                    D.O.T.S Projector
                 </label>
             </div>
 
